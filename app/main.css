@@ -129,12 +129,13 @@ header {
 
 nav {
   background: #2facdd;
-  padding: 0 15px;
+  padding: 15px 10px;
   z-index: 20;
 }
 
 a,
-a:not([href]) {
+a:not([href]),
+.submenu-container {
   color: white;
   text-decoration: none;
 }
@@ -162,6 +163,7 @@ a:not([href]) {
 .item:not(.button) a:hover,
 .item a:hover::after {
   color: #ccc;
+  text-decoration: none;
 }
 
 .menu {
@@ -173,7 +175,8 @@ a:not([href]) {
 }
 
 .menu li a,
-.menu li a:not(href) {
+.menu li a:not(href),
+.submenu-container {
   display: block;
   padding: 5px 15px;
 }
@@ -222,7 +225,7 @@ a:not([href]) {
   display: block;
 }
 
-.has-submenu > a::after {
+#has-submenu > span::after {
   font-family: 'Font Awesome 5 Free';
   font-size: 12px;
   line-height: 16px;
@@ -239,6 +242,7 @@ a:not([href]) {
 .submenu-active {
   background-color: #111;
   border-radius: 3px;
+  color: #fff;
 }
 /*End Navigation*/
 
@@ -937,7 +941,7 @@ textarea.tall-textarea {
     position: absolute;
     left: 0;
     top: 43px;
-    background: #111;
+    background: #3a3a3a;
   }
   .toggle {
     display: none;

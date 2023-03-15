@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Axios from 'axios';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -17,12 +17,19 @@ import Portfolio from './components/Portfolio';
 function Main() {
   const initialState = {
     flashMessages: [],
-    isMenuOpen: false,
+    isSubMenuOpen: false,
   };
+
   function useReducer(draft, action) {
     switch (action.type) {
       case 'flashMessage':
         draft.flashMessages.push(action.value);
+        break;
+      case 'openSubmenu':
+        draft.isSubMenuOpen = true;
+        break;
+      case 'closeSubmenu':
+        draft.isSubMenuOpen = false;
         break;
     }
   }
