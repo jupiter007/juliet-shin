@@ -12,7 +12,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import FlashMessage from './components/FlashMessage';
-import Portfolio from './components/Portfolio';
+import Archives from './components/Archives';
+import About from './components/About';
 
 function Main() {
   const initialState = {
@@ -44,7 +45,8 @@ function Main() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/archives" element={<Archives />} />
+            <Route path="/about" element={<About />} />
           </Routes>
           <Footer />
         </BrowserRouter>

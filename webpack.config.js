@@ -9,11 +9,6 @@ module.exports = {
     path: path.resolve(__dirname, 'app'),
     filename: 'bundled.js',
   },
-  resolve: {
-    fallback: {
-      fs: false,
-    },
-  },
   plugins: [new Dotenv(), new NodePolyfillPlugin()],
   mode: 'development',
   devtool: 'source-map',
@@ -29,7 +24,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
+        resolve: {
+          extensions: ['.js', '.jsx'],
+        },
         exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
