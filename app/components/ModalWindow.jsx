@@ -47,9 +47,13 @@ function ModalWindow(props) {
                   </div>
                   <div className="screenshot">
                     <img src={img.fullUrl} />
-                  </div>
-                  <div className="caption-container">
-                    <p className="caption">{img.description}</p>
+                    <div className="caption-container">
+                      <p className="caption">
+                        <a href={img.waybackUrl} target="_blank" rel="noopener">
+                          {img.description}
+                        </a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               );

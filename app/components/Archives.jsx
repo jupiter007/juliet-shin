@@ -18,7 +18,10 @@ function Archives() {
           also built websites for Equal Rights Org. and Children's Learning
           Center.
         </p>
-        <p>Click icons below to view screenshots.</p>
+        <p>
+          Click icons below to view screenshots, and view the sites in the
+          Internet Archives.
+        </p>
         <h2 id="websites">Websites</h2>
         <div>
           <ModalWindow images={websiteImages} />

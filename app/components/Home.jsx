@@ -72,13 +72,21 @@ const Home = () => {
         <div className="content-wrap divider">
           <h2>Featured Projects</h2>
           <p>
-            View selected projects below. More information can be found at{' '}
-            <a href="https://www.linkedin.com/in/julietshin1/">linkedin</a>.
+            View selected projects below. More detailed information about my
+            experience and skills can be found at{' '}
+            <a
+              href="https://www.linkedin.com/in/julietshin1/"
+              target="_blank"
+              rel="noopener"
+            >
+              linkedin
+            </a>
+            .
           </p>
 
           <section className="project-item portfolio-section tri-view">
             <div className="portfolio-item reveal">
-              <h3>Xoom send money flow</h3>
+              <h3>Xoom</h3>
               <p className="description">
                 Built and maintained the remittance app for Xoom’s online money
                 transfer using Node.js, Express framework and React on virtual
@@ -89,8 +97,8 @@ const Home = () => {
               <p>
                 {' '}
                 The flow consisted of pages to select countries, enter amounts,
-                add and select recipients, select and enter info on payment and
-                disbursement types.{' '}
+                add and select recipients, and select and enter info on payment
+                and disbursement types.{' '}
               </p>
               <div className="cards">
                 <div className="text-card">

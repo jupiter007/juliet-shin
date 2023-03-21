@@ -58,6 +58,13 @@ function Header() {
               Archives
             </Link>
           </li>
+          {menuOpen && (
+            <li className="item">
+              <Link to="/" className="nav-link" onClick={handleMenuClose}>
+                Home
+              </Link>
+            </li>
+          )}
           <li className="toggle" onClick={() => setMenuOpen(!menuOpen)}>
             <a href="#">
               {menuOpen ? (
