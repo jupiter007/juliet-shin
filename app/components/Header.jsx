@@ -1,41 +1,16 @@
-import React, { useEffect, useState, useContext, useRef } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import StateContext from '../StateContext';
 import DispatchContext from '../DispatchContext';
 
-function Header() {
-  const wrapperRef = useRef(null);
-  const appState = useContext(StateContext);
+function Header(props) {
   const appDispatch = useContext(DispatchContext);
   const [menuOpen, setMenuOpen] = useState(false);
+  const isStatic = props.staticEmpty;
 
   function handleMenuClose() {
     setMenuOpen(false);
     appDispatch({ type: 'closeSubmenu' });
   }
-
-  function toggleSubMenu() {
-    if (appState.isSubMenuOpen) {
-      appDispatch({ type: 'closeSubmenu' });
-    } else {
-      appDispatch({ type: 'openSubmenu' });
-    }
-  }
-
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-        appDispatch({ type: 'closeSubmenu' });
-      }
-    }
-
-    //Bind the event listener
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [wrapperRef]);
 
   return (
     <>
@@ -44,20 +19,31 @@ function Header() {
       <nav>
         <ul className={'menu' + (menuOpen ? ' active' : '')}>
           <li className="logo">
-            <Link to="/">
-              <img src="/public/dragonfly.png" height="60" alt="home" />
-            </Link>
+            {!isStatic && (
+              <Link to="/">
+                <img src="/public/dragonfly.png" height="60" alt="home" />
+              </Link>
+            )}
+            {isStatic && <div className="nav-link">Juliet Shin</div>}
           </li>
-          <li className="item">
-            <Link to="/about" className="nav-link" onClick={handleMenuClose}>
-              About Me
-            </Link>
-          </li>
-          <li className="item">
-            <Link to="/archives" className="nav-link" onClick={handleMenuClose}>
-              Archives
-            </Link>
-          </li>
+          {!isStatic && (
+            <li className="item">
+              <Link to="/about" className="nav-link" onClick={handleMenuClose}>
+                About Me
+              </Link>
+            </li>
+          )}
+          {!isStatic && (
+            <li className="item">
+              <Link
+                to="/archives"
+                className="nav-link"
+                onClick={handleMenuClose}
+              >
+                Archives
+              </Link>
+            </li>
+          )}
           {menuOpen && (
             <li className="item">
               <Link to="/" className="nav-link" onClick={handleMenuClose}>

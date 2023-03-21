@@ -1,31 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 function ModalWindow(props) {
   const { images } = props;
   const [open, setOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(1);
 
-  console.log(currentIndex);
   return (
     <>
-      <div>
-        <div className="thumbnail">
-          {images &&
-            images.map((img, index) => {
-              return (
-                <img
-                  key={index}
-                  data-alt={index + 1}
-                  src={img.thumbnailUrl}
-                  className="hover-shadow"
-                  onClick={() => {
-                    setOpen(true);
-                    setCurrentIndex(index + 1);
-                  }}
-                />
-              );
-            })}
-        </div>
+      <div className="thumbnail">
+        {images &&
+          images.map((img, index) => {
+            return (
+              <img
+                key={index}
+                data-alt={index + 1}
+                src={img.thumbnailUrl}
+                className="hover-shadow"
+                onClick={() => {
+                  setOpen(true);
+                  setCurrentIndex(index + 1);
+                }}
+              />
+            );
+          })}
       </div>
       <div id="myModal" className={'modal-window' + (open ? ' open' : '')}>
         <span className="close cursor" onClick={() => setOpen(false)}>
@@ -42,18 +39,18 @@ function ModalWindow(props) {
                   key={index}
                   data-alt={index + 1}
                 >
+                  <div className="caption-container">
+                    <p className="caption">
+                      <a href={img.waybackUrl} target="_blank" rel="noopener">
+                        {img.description}
+                      </a>
+                    </p>
+                  </div>
                   <div className="counter">
                     {index + 1}/ {images.length}
                   </div>
                   <div className="screenshot">
                     <img src={img.fullUrl} />
-                    <div className="caption-container">
-                      <p className="caption">
-                        <a href={img.waybackUrl} target="_blank" rel="noopener">
-                          {img.description}
-                        </a>
-                      </p>
-                    </div>
                   </div>
                 </div>
               );

@@ -7,6 +7,7 @@ const Footer = () => {
       <a
         href="https://www.flaticon.com/free-icons/dragonfly"
         title="dragonfly icons"
+        className="disclosure"
       >
         Dragonfly icons created by Roundicons Premium - Flaticon
       </a>

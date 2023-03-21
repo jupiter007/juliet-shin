@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Axios from 'axios';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useImmerReducer } from 'use-immer';
-Axios.defaults.baseURL = process.env.BACKENDURL || '';
 
 import StateContext from './StateContext';
 import DispatchContext from './DispatchContext';
