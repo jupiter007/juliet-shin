@@ -149,6 +149,9 @@ svg {
   padding: 15px;
 }
 
+.content-wrap .icons li i {
+  color: var(--dark-blue);
+}
 .paypal-project {
   padding-top: 30px;
 }
