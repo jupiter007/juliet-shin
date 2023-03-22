@@ -13,10 +13,18 @@ const About = () => {
           <h2>Career</h2>
           <div className="info">
             <p>
-              I have spent the last 20 years designing and building websites and
-              web applications. I began my web development career as a
-              client-side web developer, but spent the last six years building
-              both client-side and server-side web applications.
+              I have over 20 years of experience in building websites and web
+              applications, working independently and in teams for a wide range
+              of companies and organizations. I enjoy all facets of the
+              development process, from brainstorming solutions to challenges,
+              collaborating with product and design, building new features and
+              web applications, and optimizing user experience and making it
+              accessible to all.
+            </p>
+            <p>
+              I began my web development career as a client-side web developer,
+              but spent the last six years building both client-side and
+              server-side web applications.
             </p>
           </div>
           <h2>Interests</h2>
@@ -24,21 +32,17 @@ const About = () => {
             <p>
               I have a great love for our natural resources, and most of my
               hobbies revolve around that. You can frequently find me hiking or
-              bicycling in any number of the beautiful areas the Bay Area has to
+              bicycling in any number of beautiful areas the Bay Area has to
               offer. I spent five years volunteering for the Gulf of the
-              Farallones National Marine Sanctuary doing beach surveys for them
-              and acting as a Harbor Seal docent. I also try and volunteer for,
-              or donate to, other non-profits in the Bay Area that work to
-              protect and share our natural resources.
+              Farallones National Marine Sanctuary doing beach surveys and
+              docent work. I've also organized group volunteer efforts with the
+              Golden Gate National Parks Conservancy.
             </p>
             <p>
-              Other than the outdoors, I love listening to and playing music. I
-              play a little guitar, piano and violin, and love to sing. I love
-              to read and am always working through a couple of books at a time.
-              I enjoy cooking and eating, and my cooking skills are a constantly
-              evolving process. Lastly, I love spending time with my husband, my
-              family and friends, and especially my niece Kiana and my sister's
-              dogs Ardbeg and Tomi.
+              Other than the outdoors, I love spending time with my family and
+              friends. I play a little guitar, piano and violin, and love to
+              sing. I love to read and am always working through a couple of
+              books at a time.
             </p>
           </div>
         </div>
