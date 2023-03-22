@@ -5,6 +5,7 @@
   "main": "Main.tsx",
   "scripts": {
     "webpackDev": "webpack serve",
+    "build": "webpackBuild",
     "webpackBuild": "webpack",
     "previewDist": "node previewDist",
     "test": "jest"
