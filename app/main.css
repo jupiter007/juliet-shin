@@ -7,6 +7,7 @@
   --secondary-blue: #00b4d8;
   --tertiary-blue: #90e0ef;
   --quaternary-blue: #ade8f4;
+  --lightest-blue: #caf0f8;
   --yellow-orange: #ffc608;
   --orange: #fb8500;
 }
@@ -46,6 +47,10 @@ a {
   text-decoration: none;
 }
 
+.content-wrap a {
+  color: var(--dark-blue);
+  text-decoration: underline;
+}
 p {
   font-size: 1rem;
   margin-bottom: 1rem;
@@ -187,8 +192,9 @@ svg {
   min-height: 350px;
 }
 
-.my-photo h2 {
+.my-photo h1 {
   color: var(--white);
+  font-size: 45px;
   padding: 20px;
 }
 
@@ -252,14 +258,14 @@ footer {
 }
 
 nav {
-  background: var(--main-blue);
+  background: var(--secondary-blue);
   display: block;
   padding: 15px 10px 0 10px;
   z-index: 20;
 }
 
 nav a {
-  color: var(--white);
+  color: var(--dark-blue);
 }
 
 .item {
@@ -279,7 +285,7 @@ nav a {
 }
 
 .item:hover {
-  background-color: var(--dark-gray);
+  background-color: var(--tertiary-blue);
 }
 
 .item a:hover::after {
@@ -525,7 +531,7 @@ img.hover-shadow {
 
 .reveal {
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateY(150px);
   transition: all 2s ease;
 }
 
@@ -656,6 +662,79 @@ img.hover-shadow {
   }
 }
 
+/*Floating Alert*/
+.floating-alert {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  top: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+  -moz-animation: floatingAlert ease-in 5s forwards;
+  -webkit-animation: floatingAlert ease-in 5s forwards;
+  -o-animation: floatingAlert ease-in 5s forwards;
+  animation: floatingAlert ease-in 5s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.floating-alerts .floating-alert:last-of-type {
+  display: block;
+}
+
+@keyframes floatingAlert {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) scale(1.2);
+  }
+
+  9% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+  }
+
+  91% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+
+@-webkit-keyframes floatingAlert {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) scale(1.2);
+  }
+
+  9% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+  }
+
+  91% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+/*End Floating Alert*/
+
 /*Desktop*/
 @media (min-width: 751px) {
   h1 {
@@ -750,6 +829,10 @@ img.hover-shadow {
 
   .submenu-active {
     border-radius: 0;
+  }
+
+  .checkout-page-mobile img {
+    width: 50%;
   }
 }
 

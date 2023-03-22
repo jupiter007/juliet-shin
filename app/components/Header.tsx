@@ -1,15 +1,18 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import DispatchContext from '../DispatchContext';
-
-function Header(props) {
+import { ActionType } from '../state/action-types';
+interface HeaderProps {
+  staticEmpty?: boolean;
+}
+function Header(props: HeaderProps) {
   const appDispatch = useContext(DispatchContext);
   const [menuOpen, setMenuOpen] = useState(false);
   const isStatic = props.staticEmpty;
 
   function handleMenuClose() {
     setMenuOpen(false);
-    appDispatch({ type: 'closeSubmenu' });
+    appDispatch({ type: ActionType.CLOSE_SUB_MENU });
   }
 
   return (
@@ -20,7 +23,7 @@ function Header(props) {
         <ul className={'menu' + (menuOpen ? ' active' : '')}>
           <li className="logo">
             {!isStatic && (
-              <Link to="/">
+              <Link to="/" title="home">
                 <img src="/public/dragonfly.png" height="60" alt="home" />
               </Link>
             )}
@@ -56,7 +59,10 @@ function Header(props) {
               {menuOpen ? (
                 <i className="fas fa-times"></i>
               ) : (
-                <i className="fas fa-bars"></i>
+                <>
+                  <i className="fas fa-bars"></i>
+                  <span className="hidden-accessibly">menu</span>
+                </>
               )}
             </a>
           </li>

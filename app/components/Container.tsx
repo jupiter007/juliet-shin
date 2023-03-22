@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import classNames from 'classnames';
 
-function Container(props) {
+interface ContainerProps {
+  children: ReactNode;
+}
+function Container(props: ContainerProps) {
   const containerClasses = classNames('content-wrapper');
   return <main className={containerClasses}>{props.children}</main>;
 }

@@ -6,7 +6,7 @@ const About = () => {
     <Page title="About">
       <section className="about-content">
         <div className="my-photo">
-          <h2>About Me</h2>
+          <h1>About Me</h1>
         </div>
 
         <div className="content-inner">

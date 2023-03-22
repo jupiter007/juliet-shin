@@ -14,7 +14,6 @@ const Home = () => {
                 href="https://www.linkedin.com/in/julietshin1/"
                 target="_blank"
                 rel="noopener"
-                alt="LinkedIn"
                 title="LinkedIn"
               >
                 <i className="fa-brands fa-linkedin"></i>
@@ -25,7 +24,6 @@ const Home = () => {
                 href="https://github.com/jupiter007/juliet-shin"
                 rel="noopener"
                 target="_blank"
-                alt="github"
                 title="github"
               >
                 <i className="fa-brands fa-github"></i>
@@ -106,6 +104,7 @@ const Home = () => {
                     <img
                       src="/public/select-country-mobile.png"
                       className="small-img"
+                      alt="Select country page"
                     />
                   </div>
                 </div>
@@ -114,6 +113,7 @@ const Home = () => {
                     <img
                       src="/public/send-money-mobile.png"
                       className="small-img"
+                      alt="Amount page"
                     />
                   </div>
                 </div>
@@ -122,6 +122,7 @@ const Home = () => {
                     <img
                       src="/public/cash-pickup-mobile.png"
                       className="small-img"
+                      alt="Cash pickup page"
                     />
                   </div>
                 </div>
@@ -140,7 +141,10 @@ const Home = () => {
                   focus on PayPal Credit and Pay Later features.
                 </p>
                 <div className="checkout-page-mobile">
-                  <img src="/public/paypal-review-page-mobile.png" />
+                  <img
+                    src="/public/paypal-review-page-mobile.png"
+                    alt="PayPal checkout page"
+                  />
                 </div>
               </div>
               <div className="project-button">

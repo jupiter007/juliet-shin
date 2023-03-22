@@ -8,7 +8,7 @@ function Archives() {
     <Page title="Archives">
       <section className="archives-section">
         <div id="gallery">
-          <h2>Archives</h2>
+          <h1>Archives</h1>
           <p>
             Prior to my work at Xoom and PayPal, I designed and built websites
             for Forward Funds, Forward Management, Sierra Club Funds and Reflow.

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-
-function ModalWindow(props) {
+import { websiteImages } from './includes/constants';
+interface ModalProps {
+  images: typeof websiteImages;
+}
+function ModalWindow(props: ModalProps) {
   const { images } = props;
   const [open, setOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -20,6 +23,7 @@ function ModalWindow(props) {
                   setOpen(true);
                   setCurrentIndex(index + 1);
                 }}
+                alt={img.description}
               />
             );
           })}
@@ -50,7 +54,7 @@ function ModalWindow(props) {
                     {index + 1}/ {images.length}
                   </div>
                   <div className="screenshot">
-                    <img src={img.fullUrl} />
+                    <img src={img.fullUrl} alt={img.description} />
                   </div>
                 </div>
               );

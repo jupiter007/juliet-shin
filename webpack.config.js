@@ -21,7 +21,8 @@ class RunAfterCompile {
 }
 
 config = {
-  entry: ['./app/Main.js', './app/script.js'],
+  devtool: 'source-map',
+  entry: ['./app/Main.tsx', './app/script.js'],
   output: {
     publicPath: '/',
     path: path.resolve(__dirname, 'app'),
@@ -38,19 +39,20 @@ config = {
     new HtmlWebpackHarddiskPlugin(),
   ],
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   mode: 'development',
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx|tsx|ts)$/,
         exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
           options: {
             presets: [
               '@babel/preset-react',
+              '@babel/preset-typescript',
               ['@babel/preset-env', { targets: { node: '12' } }],
             ],
           },

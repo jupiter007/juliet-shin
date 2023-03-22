@@ -13,21 +13,28 @@ import FlashMessage from './components/FlashMessage';
 import Archives from './components/Archives';
 import About from './components/About';
 
+import { Action } from './state/actions';
+
 function Main() {
   const initialState = {
     flashMessages: [],
     isSubMenuOpen: false,
   };
 
-  function useReducer(draft, action) {
+  interface DraftState {
+    flashMessages: string[];
+    isSubMenuOpen: boolean;
+  }
+
+  function useReducer(draft: DraftState, action: Action) {
     switch (action.type) {
-      case 'flashMessage':
+      case 'flash-message':
         draft.flashMessages.push(action.value);
         break;
-      case 'openSubmenu':
+      case 'open-submenu':
         draft.isSubMenuOpen = true;
         break;
-      case 'closeSubmenu':
+      case 'close-submenu':
         draft.isSubMenuOpen = false;
         break;
     }
@@ -53,7 +60,7 @@ function Main() {
   );
 }
 
-const root = ReactDOM.createRoot(document.querySelector('#app'));
+const root = ReactDOM.createRoot(document.querySelector('#app') as HTMLElement);
 root.render(<Main />);
 
 if (module.hot) {
