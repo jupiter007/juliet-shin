@@ -668,7 +668,7 @@ img.hover-shadow {
 /*Floating Alert*/
 .floating-alert {
   display: none;
-  position: absolute;
+  position: absolute !important;
   z-index: 999;
   top: 38px;
   left: 50%;
@@ -735,6 +735,28 @@ img.hover-shadow {
     visibility: hidden;
     transform: translateX(-50%) scale(1.2);
   }
+}
+
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.alert-success {
+  color: #036;
+  background-color: var(--lightest-blue);
+  border-color: #b9edf7;
+}
+
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.text-center {
+  text-align: center;
 }
 /*End Floating Alert*/
 

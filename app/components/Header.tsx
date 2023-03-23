@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import DispatchContext from '../DispatchContext';
 import { ActionType } from '../state/action-types';
@@ -14,6 +14,10 @@ function Header(props: HeaderProps) {
     setMenuOpen(false);
     appDispatch({ type: ActionType.CLOSE_SUB_MENU });
   }
+
+  useEffect(() => {
+    appDispatch({ type: 'flash-message', value: 'Welcome to my site!' });
+  }, []);
 
   return (
     <>
