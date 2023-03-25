@@ -673,10 +673,10 @@ img.hover-shadow {
   top: 38px;
   left: 50%;
   transform: translateX(-50%);
-  -moz-animation: floatingAlert ease-in 5s forwards;
-  -webkit-animation: floatingAlert ease-in 5s forwards;
-  -o-animation: floatingAlert ease-in 5s forwards;
-  animation: floatingAlert ease-in 5s forwards;
+  -moz-animation: floatingAlert ease-in 2s forwards;
+  -webkit-animation: floatingAlert ease-in 2s forwards;
+  -o-animation: floatingAlert ease-in 2s forwards;
+  animation: floatingAlert ease-in 2s forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -748,7 +748,7 @@ img.hover-shadow {
 .alert-success {
   color: #036;
   background-color: var(--lightest-blue);
-  border-color: #b9edf7;
+  border-color: #caf0f8;
 }
 
 .shadow-sm {
