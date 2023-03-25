@@ -2,7 +2,7 @@
 
 # My Portfolio Site
 
-I created this portfolio site as a fun exercise to share some of my coding skills on github.
+I created this Single Page Application site from scratch as a fumn exercise to share some of my coding skills on github.
 
 ## Description
 
