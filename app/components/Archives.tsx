@@ -12,8 +12,8 @@ function Archives() {
           <p>
             Prior to my work at Xoom and PayPal, I designed and built websites
             for Forward Funds, Forward Management, Sierra Club Funds and Reflow.
-            I also built websites for Equal Rights Org. and Children's Learning
-            Center.
+            I also built websites for Equal Rights Advocates, and Children's
+            Learning Center.
           </p>
           <p>
             Click icons below to view screenshots, and view the sites in the

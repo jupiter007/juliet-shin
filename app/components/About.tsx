@@ -22,9 +22,9 @@ const About = () => {
               accessible to all.
             </p>
             <p>
-              I began my web development career as a client-side web developer,
-              but spent the last six years building both client-side and
-              server-side web applications.
+              My experience is primarily on the client-side, but that includes
+              the rendering of pages both on the client and server side using
+              React.
             </p>
           </div>
           <h2>Interests</h2>

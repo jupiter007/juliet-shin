@@ -33,36 +33,9 @@ const Home = () => {
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
-            fill="#00b4d8"
-            fillOpacity="1"
-            d="M0,96L48,96C96,96,192,96,288,122.7C384,149,480,203,576,186.7C672,171,768,85,864,64C960,43,1056,85,1152,96C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></path>
-        </svg>
-      </section>
-      <section className="home-section">
-        <div className="content-wrap divider">
-          <h2>Skills</h2>
-          <p>
-            I've been developing front-end and back-end applications with
-            JavaScript using technologies such as NodeJS, React, and Express.
-          </p>
-          <ul className="icons">
-            <li className="github">
-              <i className="fa-brands fa-square-js"></i>
-            </li>
-            <li className="linkedin">
-              <i className="fa-brands fa-react"></i>
-            </li>
-            <li className="linkedin">
-              <i className="fa-brands fa-node-js"></i>
-            </li>
-          </ul>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
             fill="#ade8f4"
             fillOpacity="1"
-            d="M0,288L48,266.7C96,245,192,203,288,176C384,149,480,139,576,149.3C672,160,768,192,864,192C960,192,1056,160,1152,154.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            d="M0,96L48,96C96,96,192,96,288,122.7C384,149,480,203,576,186.7C672,171,768,85,864,64C960,43,1056,85,1152,96C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           ></path>
         </svg>
       </section>
@@ -86,17 +59,22 @@ const Home = () => {
             <div className="portfolio-item reveal">
               <h3>Xoom</h3>
               <p className="description">
-                Built and maintained the remittance app for Xoom’s online money
-                transfer using Node.js, Express framework and React on virtual
-                environments in Docker containers. The app was created around an
-                MVC architecture, using controllers to request data from the
-                orchestration layer, data models to structure the data and view.
+                I built and maintained the remittance app, which was a critical
+                part of Xoom’s online money transfer flow, using NodeJS, Express
+                framework, custom middleware and React. The app was deployed to
+                virtual environments using Docker containers.
+              </p>
+              <p>
+                The app rendered web pages on the server-side using an MVC
+                architecture, with controllers requesting data from the
+                orchestration layer and structuring the data using data models,
+                and views being rendered using React components.
               </p>
               <p>
                 {' '}
                 The flow consisted of pages to select countries, enter amounts,
-                add and select recipients, and select and enter info on payment
-                and disbursement types.{' '}
+                enter bank data, add recipients, select and enter payment info,
+                and selecting disbursement types.{' '}
               </p>
               <div className="cards">
                 <div className="text-card">
@@ -137,8 +115,17 @@ const Home = () => {
               <div className="paypal-project">
                 <h3>PayPal Checkout</h3>
                 <p className="description">
-                  I built multiple features for the PayPal Checkout flow with a
-                  focus on PayPal Credit and Pay Later features.
+                  I assisted in adding new payment methods to the PayPal
+                  Checkout flow. Features I worked on included adding PayPal
+                  Credit and Pay Later payment options. I also worked on PayPal
+                  Rewards.
+                </p>
+                <p className="description">
+                  Work on the new features included setting up A/B Testing and
+                  Analytics to measure KPIs.
+                </p>
+                <p className="description">
+                  Collaborated with Product, Design, and team members.
                 </p>
                 <div className="checkout-page-mobile">
                   <img
@@ -157,9 +144,36 @@ const Home = () => {
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
-            fill="#caf0f8"
+            fill="#00b4d8"
             fillOpacity="1"
             d="M0,96L48,122.7C96,149,192,203,288,208C384,213,480,171,576,165.3C672,160,768,192,864,192C960,192,1056,160,1152,133.3C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+      </section>
+      <section className="home-section">
+        <div className="content-wrap divider">
+          <h2>Skills</h2>
+          <p>
+            I've been developing front-end and back-end applications with
+            JavaScript using technologies such as NodeJS, React, and Express.
+          </p>
+          <ul className="icons">
+            <li className="github">
+              <i className="fa-brands fa-square-js"></i>
+            </li>
+            <li className="linkedin">
+              <i className="fa-brands fa-react"></i>
+            </li>
+            <li className="linkedin">
+              <i className="fa-brands fa-node-js"></i>
+            </li>
+          </ul>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#caf0f8"
+            fillOpacity="1"
+            d="M0,288L48,266.7C96,245,192,203,288,176C384,149,480,139,576,149.3C672,160,768,192,864,192C960,192,1056,160,1152,154.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           ></path>
         </svg>
       </section>

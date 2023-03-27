@@ -115,11 +115,11 @@ svg {
 }
 
 .home-section:nth-child(2) {
-  background: var(--secondary-blue);
+  background: var(--quaternary-blue);
 }
 
 .home-section:nth-child(3) {
-  background: var(--quaternary-blue);
+  background: var(--secondary-blue);
 }
 
 .content-wrap {
