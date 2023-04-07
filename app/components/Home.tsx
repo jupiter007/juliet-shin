@@ -7,7 +7,7 @@ const Home = () => {
       <section className="home-section">
         <div className="heading-wrapper">
           <h1>Juliet Shin</h1>
-          <h2>Frontend Software Engineer</h2>
+          <h2>Full-Stack Software Engineer</h2>
           <ul className="icons">
             <li className="linkedin">
               <a
@@ -154,18 +154,27 @@ const Home = () => {
         <div className="content-wrap divider">
           <h2>Skills</h2>
           <p>
-            I've been developing front-end and back-end applications with
-            JavaScript using technologies such as NodeJS, React, and Express.
+            I am skilled in multiple areas of web development, with a strong
+            foundation in React and experience working with both server-side and
+            client-side rendering. I also have some experience working with
+            developing web APIs. Technologies used include JavaScript, React,
+            NodeJS, Express,and TypeScript.
           </p>
           <ul className="icons">
             <li className="github">
-              <i className="fa-brands fa-square-js"></i>
+              <i className="fa-brands fa-square-js" title="Javascript"></i>
             </li>
             <li className="linkedin">
-              <i className="fa-brands fa-react"></i>
+              <i className="fa-brands fa-react" title="React"></i>
             </li>
             <li className="linkedin">
-              <i className="fa-brands fa-node-js"></i>
+              <i className="fa-brands fa-node-js" title="NodeJS"></i>
+            </li>
+            <li className="linkedin">
+              <i className="express-icon" title="Express JS"></i>
+            </li>
+            <li className="linkedin">
+              <i className="typescript-icon" title="Typescript"></i>
             </li>
           </ul>
         </div>

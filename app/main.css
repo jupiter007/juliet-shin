@@ -139,6 +139,7 @@ svg {
 .icons {
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style-type: none;
   margin-top: 15px;
 }
@@ -147,6 +148,26 @@ svg {
   color: var(--white);
   font-size: 40px;
   padding: 15px;
+}
+
+.fa-linkedin:hover,
+.fa-github:hover {
+  color: var(--lightest-blue);
+}
+
+.express-icon {
+  background: url('./public/express-js-icon.png') no-repeat center center;
+  background-size: 30px 30px;
+  display: block;
+  width: 50px;
+}
+
+.typescript-icon {
+  background: url('./public/icons8-typescript-150.png') no-repeat center center;
+  background-size: 40px 40px;
+  display: block;
+  width: 65px;
+  height: 70px;
 }
 
 .content-wrap .icons li i {
@@ -417,8 +438,9 @@ nav a {
 }
 
 .preview img {
-  width: 72px;
-  height: 72px;
+  height: 60px;
+  margin-right: 5px;
+  width: 60px;
 }
 
 .prev,
@@ -760,6 +782,19 @@ img.hover-shadow {
 }
 /*End Floating Alert*/
 
+/*Footer*/
+.contact-list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.contact-list li {
+  display: inline-block;
+  padding: 30px;
+}
+
+/* End Footer */
 /*Desktop*/
 @media (min-width: 751px) {
   h1 {
@@ -858,6 +893,12 @@ img.hover-shadow {
 
   .checkout-page-mobile img {
     width: 50%;
+  }
+
+  .preview img {
+    height: 75px;
+    margin-right: 5px;
+    width: 75px;
   }
 }
 
