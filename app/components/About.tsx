@@ -21,11 +21,6 @@ const About = () => {
               web applications, and optimizing user experience and making it
               accessible to all.
             </p>
-            <p>
-              My experience is primarily on the client-side, but that includes
-              the rendering of pages both on the client and server side using
-              React.
-            </p>
           </div>
           <h2>Interests</h2>
           <div className="info">

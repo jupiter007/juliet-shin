@@ -61,19 +61,12 @@ const Home = () => {
               <p className="description">
                 I built and maintained the remittance app, which was a critical
                 part of Xoom’s online money transfer flow, using NodeJS, Express
-                framework, custom middleware and React. The app was deployed to
-                virtual environments using Docker containers.
-              </p>
-              <p>
-                The app rendered web pages on the server-side using an MVC
-                architecture, with controllers requesting data from the
-                orchestration layer and structuring the data using data models,
-                and views being rendered using React components.
+                framework, custom middleware and React.
               </p>
               <p>
                 {' '}
-                The flow consisted of pages to select countries, enter amounts,
-                enter bank data, add recipients, select and enter payment info,
+                The flow included selecting countries, entering send amounts,
+                entering bank data, adding recipients, entering payment info,
                 and selecting disbursement types.{' '}
               </p>
               <div className="cards">
@@ -119,13 +112,6 @@ const Home = () => {
                   Checkout flow. Features I worked on included adding PayPal
                   Credit and Pay Later payment options. I also worked on PayPal
                   Rewards.
-                </p>
-                <p className="description">
-                  Work on the new features included setting up A/B Testing and
-                  Analytics to measure KPIs.
-                </p>
-                <p className="description">
-                  Collaborated with Product, Design, and team members.
                 </p>
                 <div className="checkout-page-mobile">
                   <img
