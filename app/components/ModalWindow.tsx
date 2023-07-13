@@ -47,7 +47,8 @@ function ModalWindow(props: ModalProps) {
             setOpen(false);
           }}
         >
-          &times;
+          <span className="hidden-accessibly">Close</span>
+          <span aria-hidden="true">&times;</span>
         </a>
         <div className="slides-container">
           {images &&
@@ -80,21 +81,30 @@ function ModalWindow(props: ModalProps) {
           {/* Next/previous controls */}
           {currentIndex > 1 && (
             <a
+              href="#"
+              tabIndex={0}
               className="prev"
-              onClick={() =>
-                setCurrentIndex((currentIndex) => (1 ? currentIndex - 1 : 1))
-              }
+              onClick={(e) => {
+                e.preventDefault();
+                setCurrentIndex((currentIndex) => (1 ? currentIndex - 1 : 1));
+              }}
             >
-              &#10094;
+              <span className="hidden-accessibly">Previous</span>
+              <span aria-hidden="true">&#10094;</span>
             </a>
           )}
 
           {currentIndex < images.length && (
             <a
+              href="#"
+              tabIndex={0}
               className="next"
-              onClick={() => setCurrentIndex(currentIndex + 1)}
+              onClick={(e) => {
+                e.preventDefault();
+                setCurrentIndex(currentIndex + 1);
+              }}
             >
-              &#10095;
+              <span className="hidden-accessibly">Next</span>&#10095;
             </a>
           )}
         </div>
