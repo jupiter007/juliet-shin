@@ -360,8 +360,7 @@ nav a {
   border: 5px solid var(--dark-gray);
   border-width: 5px 5px 20px;
   height: 72px;
-  margin-right: 20px;
-  margin-top: 20px;
+  margin: 10px;
   width: 72px;
 }
 

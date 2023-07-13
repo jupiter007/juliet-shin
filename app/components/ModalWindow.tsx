@@ -8,30 +8,47 @@ function ModalWindow(props: ModalProps) {
   const [open, setOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(1);
 
+  function handleClick(
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    index: number
+  ) {
+    e.preventDefault();
+    setOpen(true);
+    setCurrentIndex(index + 1);
+  }
   return (
     <>
       <div className="thumbnail">
         {images &&
           images.map((img, index) => {
             return (
-              <img
-                key={index}
-                data-alt={index + 1}
-                src={img.thumbnailUrl}
-                className="hover-shadow"
-                onClick={() => {
-                  setOpen(true);
-                  setCurrentIndex(index + 1);
-                }}
-                alt={img.description}
-              />
+              <a href="#" onClick={(e) => handleClick(e, index)}>
+                <img
+                  key={index}
+                  data-alt={index + 1}
+                  src={img.thumbnailUrl}
+                  className="hover-shadow"
+                  alt={img.description}
+                />
+              </a>
             );
           })}
       </div>
-      <div id="myModal" className={'modal-window' + (open ? ' open' : '')}>
-        <span className="close cursor" onClick={() => setOpen(false)}>
+      <div
+        tabIndex={0}
+        id="myModal"
+        className={'modal-window' + (open ? ' open' : '')}
+      >
+        <a
+          href="#"
+          className="close cursor"
+          onClick={(e) => {
+            e.preventDefault();
+            setOpen(false);
+          }}
+        >
           &times;
-        </span>
+        </a>
         <div className="slides-container">
           {images &&
             images.map((img, index) => {
@@ -87,12 +104,19 @@ function ModalWindow(props: ModalProps) {
             images.map((img, index) => {
               return (
                 <div className="preview" key={index}>
-                  <img
-                    onClick={() => setCurrentIndex(index + 1)}
-                    className="demo"
-                    src={img.thumbnailUrl}
-                    alt={img.description}
-                  />
+                  <a
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setCurrentIndex(index + 1);
+                    }}
+                  >
+                    <img
+                      className="demo"
+                      src={img.thumbnailUrl}
+                      alt={img.description}
+                    />
+                  </a>
                 </div>
               );
             })}
