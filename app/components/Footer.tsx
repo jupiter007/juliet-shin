@@ -17,7 +17,7 @@ const Footer = () => {
         </ul>
       </div>
 
-      <p>&copy; {new Date().getFullYear()} </p>
+      <p className="copyright">&copy; {new Date().getFullYear()} </p>
       <a
         href="https://www.flaticon.com/free-icons/dragonfly"
         title="dragonfly icons"

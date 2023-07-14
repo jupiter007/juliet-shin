@@ -56,7 +56,7 @@ a {
   color: var(--orange);
 }
 p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
   margin-top: 0;
 }
@@ -74,7 +74,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 500;
   line-height: 1.2;
   margin-top: 0;
@@ -83,7 +83,7 @@ h2 {
 .disclosure {
   color: var(--dark-blue);
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1rem;
 }
 
@@ -129,8 +129,7 @@ svg {
 .content-wrap {
   margin: 0 auto;
   max-width: 800px;
-  padding: 0;
-  width: 85%;
+  padding: 0 20px;
 }
 
 .heading-wrapper {
@@ -233,7 +232,7 @@ svg {
   grid-row-gap: 20px;
   margin: auto;
   max-width: 1000px;
-  padding: 30px 15px;
+  padding: 30px 20px;
 }
 /*End About*/
 
@@ -246,7 +245,6 @@ svg {
   margin: auto;
   max-width: 800px;
   padding: 20px;
-  width: 85%;
 }
 
 .overlay {
@@ -353,14 +351,13 @@ nav a {
   flex-flow: row wrap;
   justify-content: center;
   margin: auto;
-  width: 80%;
 }
 
 .thumbnail img {
   border: 5px solid var(--dark-gray);
   border-width: 5px 5px 20px;
   height: 72px;
-  margin: 10px;
+  margin: 30px;
   width: 72px;
 }
 
@@ -423,7 +420,8 @@ nav a {
   justify-content: space-evenly;
   padding: 1rem;
   position: fixed;
-  row-gap: 10px;
+  row-gap: 20px;
+  column-gap: 20px;
   width: 100%;
   z-index: 1000;
 }
@@ -442,7 +440,6 @@ nav a {
 
 .preview img {
   height: 60px;
-  margin-right: 5px;
   width: 60px;
 }
 
@@ -797,6 +794,10 @@ img.hover-shadow {
   padding: 30px;
 }
 
+.copyright {
+  font-size: 14px;
+}
+
 /* End Footer */
 /*Desktop*/
 @media (min-width: 751px) {
@@ -805,11 +806,11 @@ img.hover-shadow {
   }
 
   h2 {
-    font-size: 45px;
+    font-size: 50px;
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .content-inner {
@@ -902,6 +903,10 @@ img.hover-shadow {
     height: 75px;
     margin-right: 5px;
     width: 75px;
+  }
+
+  .thumbnail img {
+    margin: 15px;
   }
 }
 
